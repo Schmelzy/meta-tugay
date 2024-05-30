@@ -12,6 +12,8 @@ IMAGE_INSTALL:append = " \
 	connman-client \
 	i2c-tools \
 	mosquitto mosquitto-clients \
+	nginx \
+	sensors \
 "
 
 EXTRA_IMAGE_FEATURES += "ssh-server-dropbear debug-tweaks tools-debug"
