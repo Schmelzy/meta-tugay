@@ -14,6 +14,7 @@ IMAGE_INSTALL:append = " \
 	mosquitto mosquitto-clients \
 	nginx \
 	sensors \
+	python3-pydoc \
 "
 
 EXTRA_IMAGE_FEATURES += "ssh-server-dropbear debug-tweaks tools-debug"
