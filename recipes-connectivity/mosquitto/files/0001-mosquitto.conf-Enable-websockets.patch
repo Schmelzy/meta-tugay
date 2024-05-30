@@ -1,0 +1,31 @@
+From 5bd0ed06bec681afc3b47df4d063d95084dff8af Mon Sep 17 00:00:00 2001
+From: Leon Anavi <leon.anavi@konsulko.com>
+Date: Sun, 26 May 2024 12:47:32 +0000
+Subject: [PATCH] mosquitto.conf: Enable websockets
+
+Enable websockets for Mosquitto MQTT broker.
+
+Signed-off-by: Leon Anavi <leon.anavi@konsulko.com>
+---
+ mosquitto.conf | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/mosquitto.conf b/mosquitto.conf
+index 10b0406..3889f0f 100644
+--- a/mosquitto.conf
++++ b/mosquitto.conf
+@@ -300,6 +300,11 @@
+ # unset, or set to 0, then the default of 1024 bytes will be used.
+ #websockets_headers_size
+ 
++listener 1883
++listener 8080
++protocol websockets
++allow_anonymous true
++
+ # -----------------------------------------------------------------
+ # Certificate based SSL/TLS support
+ # -----------------------------------------------------------------
+-- 
+2.39.2
+
